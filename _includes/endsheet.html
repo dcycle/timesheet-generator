@@ -1,0 +1,49 @@
+    <tr>
+      <td colspan="2"></td>
+      <td>{{ su_total }}</td>
+      <td>{{ mo_total }}</td>
+      <td>{{ tu_total }}</td>
+      <td>{{ we_total }}</td>
+      <td>{{ th_total }}</td>
+      <td>{{ fr_total }}</td>
+      <td>{{ sa_total }}</td>
+      <td>{{ sheet_total }}</td>
+    </tr>
+    <tr>
+      <td colspan="10"><strong>Signatures</strong></td>
+    </tr>
+    <tr>
+      <td colspan="10"><strong>Employee</strong></td>
+    </tr>
+    <tr class="underline-cell">
+      <td colspan="4">{{ mysheet.name }}</td>
+      <td colspan="4"><img class="signature" src="/images/{{ mysheet.signature }}" alt="{{ mysheet.name }}'s' signature" /></td>
+      <td colspan="2">{{ mysheet.Saturday }}</td>
+    </tr>
+    <tr>
+      <td colspan="4">Name</td>
+      <td colspan="4">Signature</td>
+      <td colspan="2">Date</td>
+    </tr>
+    <tr>
+      <td colspan="10"><strong>Supervisor</strong></td>
+    </tr>
+    <tr class="underline-cell">
+      <td colspan="4">{{ mysheet.supervisor }}</td>
+      <td colspan="4"><img class="signature" src="/images/{{ mysheet.supervisor_signature }}" alt="{{ mysheet.supervisor }}'s' signature" /></td>
+      <td colspan="2">{{ mysheet.Saturday }}</td>
+    </tr>
+    <tr>
+      <td colspan="4">Name</td>
+      <td colspan="4">Signature</td>
+      <td colspan="2">Date</td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+      <td colspan="4">Page 1 of 1</td>
+      <td colspan="3"><img src="/images/canadian-flag.png" alt="Canadian Flag"/></td>
+    </tr>
+  </table>
+  <div>Generated with <a href="https://github.com/dcycle/timesheet-generator">Dcycle Timesheet Generator (github.com/dcycle/timesheet-generator)</a></div>
+  <div class="hide-in-print">(page will break here when printed)</div>
+</div>

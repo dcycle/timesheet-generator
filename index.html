@@ -1,0 +1,44 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Timesheets</title>
+<link rel="stylesheet" href="/css/style.css?token={{ site.time | date: '%s' }}">
+</head>
+<body>
+{% assign start = 1 %}
+{% for sheet in site.data.timesheets %}
+  {% assign mysheet = sheet %}
+  {% if name != sheet.name or sunday != sheet.sunday %}
+    {% if start != 1%}
+      {% include endsheet.html %}
+    {% endif %}
+    {% assign su_total = 0 %}
+    {% assign mo_total = 0 %}
+    {% assign tu_total = 0 %}
+    {% assign we_total = 0 %}
+    {% assign th_total = 0 %}
+    {% assign fr_total = 0 %}
+    {% assign sa_total = 0 %}
+    {% assign sheet_total = 0 %}
+    {% assign start = 0 %}
+    {% include startsheet.html %}
+  {% endif %}
+  {% assign name = sheet.name %}
+  {% assign sunday = sheet.sunday %}
+  {% assign line_total = sheet.su_hours | plus: sheet.mo_hours | plus: sheet.tu_hours | plus: sheet.we_hours | plus: sheet.th_hours | plus: sheet.fr_hours | plus: sheet.sa_hours %}
+  {% include sheetline.html %}
+  {% assign sheet_total = sheet_total | plus: line_total %}
+  {% assign su_total = su_total | plus: sheet.su_hours %}
+  {% assign mo_total = mo_total | plus: sheet.mo_hours %}
+  {% assign tu_total = tu_total | plus: sheet.tu_hours %}
+  {% assign we_total = we_total | plus: sheet.we_hours %}
+  {% assign th_total = th_total | plus: sheet.th_hours %}
+  {% assign fr_total = fr_total | plus: sheet.fr_hours %}
+  {% assign sa_total = sa_total | plus: sheet.sa_hours %}
+{% endfor %}
+{% include endsheet.html %}
+</body>
+</html>

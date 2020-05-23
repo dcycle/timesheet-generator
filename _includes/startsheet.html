@@ -1,0 +1,121 @@
+<div class="timesheet">
+  <table style="width:100%">
+    <tr>
+      <td colspan="3">
+        <img src="/images/canada-logo.png" alt="Canadian Flag"/>
+      </td>
+      <td colspan="7">
+        Foreign Affairs, Trade and Development Canada <br/>
+        Affaires étrangères, Commerce et Développement Canada
+      </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+        Contribution Agreement
+      </td>
+      <td colspan="3">
+        <div>
+          Purchase order
+        </div>
+        <div class="box">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+        Specific terms and conditions - Reporting Form<br/>
+        Weekly Time Sheet (Form E)
+      </td>
+      <td colspan="3">
+        <div>
+          Project number
+        </div>
+        <div class="box">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="10">
+        Organization name<br/>
+        <div class="box">
+          {{ site.orgnanization_name }}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        Employee name<br/>
+        <div class="box">
+          {{ sheet.name }}
+        </div>
+      </td>
+      <td colspan="5">
+        Supervisor name<br/>
+        <div class="box">
+          {{ sheet.supervisor }}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        Address<br/>
+        <div class="box">
+          {{ site.org_address }}
+        </div>
+      </td>
+      <td colspan="5">
+        City<br/>
+        <div class="box">
+          {{ site.org_city }}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Province<br/>
+        <div class="box">
+          {{ site.org_prov }}
+        </div>
+      </td>
+      <td colspan="1">
+        Postal Code<br/>
+        <div class="box">
+          {{ site.org_postcode }}
+        </div>
+      </td>
+      <td colspan="3">
+        Week starting on Sunday YYYY-MM-DD<br/>
+        <div class="box">
+          {{ sheet.Sunday }}
+        </div>
+      </td>
+      <td colspan="3">
+        Week ending on Saturday YYYY-MM-DD<br/>
+        <div class="box">
+          {{ sheet.Saturday }}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>Sunday</td>
+      <td>Monday</td>
+      <td>Tuesday</td>
+      <td>Wednesday</td>
+      <td>Thursday</td>
+      <td>Friday</td>
+      <td>Saturday</td>
+      <td>Total Hours</td>
+    </tr>
+    <tr>
+      <td>Activity Description</td>
+      <td>Location</td>
+      <td>{{ sheet.Sunday }}</td>
+      <td>{{ sheet.Monday }}</td>
+      <td>{{ sheet.Tuesday }}</td>
+      <td>{{ sheet.Wednesday }}</td>
+      <td>{{ sheet.Thursday }}</td>
+      <td>{{ sheet.Friday }}</td>
+      <td>{{ sheet.Saturday }}</td>
+      <td></td>
+    </tr>

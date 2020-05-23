@@ -1,0 +1,25 @@
+@media print {
+  .timesheet {
+    page-break-after: always;
+  }
+  .hide-in-print {
+    display: none;
+  }
+}
+
+.underline-cell td {
+  border-bottom: 1px solid black;
+  height: 20px;
+}
+
+.box {
+  border: 1px solid black;
+  height: 20px;
+  font-weight: bold;
+  margin: 4px;
+  padding: 4px;
+}
+
+.signature {
+  max-height: 40px;
+}

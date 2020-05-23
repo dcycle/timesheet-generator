@@ -23,7 +23,7 @@ Quickstart
 * First, downdload the "timesheet" sheet of the [example Google sheets](https://docs.google.com/spreadsheets/d/1lfjIoTKzx6xQs1hDsLWBGUQcQhPVLC20h5jXkryTTEM/edit#gid=0) as CSV format.
 * Completely replace `./_data/timesheets.csv` with the exported CSV (if you're just testing this, you won't need to do this step; only do it if you want to try it with your own data).
 * Make sure Docker desktop is running and run `./scripts/deploy.sh`
-* Visit http://0.0.0.0:8081, which should [look real nice, something like this](http://timesheet-generator-example.dcycle.com), and print it!
+* Visit http://0.0.0.0:8081, which should [look real nice, something like this](http://timesheet-generator-example.dcycle.com), and print it (Chrome recognizes the page breaks between timesheets, Safari does not at the time of this writing).
 * Run `./scripts/destroy.sh`
 
 Customizing

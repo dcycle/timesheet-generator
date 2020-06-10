@@ -26,6 +26,7 @@
     {% assign start = 0 %}
     {% include startsheet.html %}
   {% endif %}
+  {% assign previoussheet = sheet %}
   {% assign name = sheet.name %}
   {% assign sunday = sheet.sunday %}
   {% assign line_total = sheet.su_hours | plus: sheet.mo_hours | plus: sheet.tu_hours | plus: sheet.we_hours | plus: sheet.th_hours | plus: sheet.fr_hours | plus: sheet.sa_hours %}
